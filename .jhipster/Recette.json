@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "changelogDate": "20231125111629",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "recette",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dureePreparation",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Recette",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "relationshipName": "recettes",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "etape",
+      "otherEntityRelationshipName": "recette",
+      "relationshipName": "etapes",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "ingredient",
+      "otherEntityRelationshipName": "recette",
+      "relationshipName": "ingredients",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
